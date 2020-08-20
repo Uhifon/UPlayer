@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>911</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTreeWidget" name="treeWidget">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(66, 66, 66);
+color:white</string>
+       </property>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>央视频道</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>CCTV1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CCTV2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CCTV3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CCTV4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CCTV5</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>卫视频道</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>湖南卫视</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>浙江卫视</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>北京卫视</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>本地频道</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>武汉新闻频道</string>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color:black</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>902</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
