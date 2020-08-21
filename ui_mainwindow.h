@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -94,38 +94,38 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
 
         const bool __sortingEnabled = treeWidget->isSortingEnabled();
         treeWidget->setSortingEnabled(false);
         QTreeWidgetItem *___qtreewidgetitem = treeWidget->topLevelItem(0);
-        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindow", "\345\244\256\350\247\206\351\242\221\351\201\223", 0));
+        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindow", "\345\244\256\350\247\206\351\242\221\351\201\223", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem1 = ___qtreewidgetitem->child(0);
-        ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindow", "CCTV1", 0));
+        ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindow", "CCTV1", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem2 = ___qtreewidgetitem->child(1);
-        ___qtreewidgetitem2->setText(0, QApplication::translate("MainWindow", "CCTV2", 0));
+        ___qtreewidgetitem2->setText(0, QApplication::translate("MainWindow", "CCTV2", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem3 = ___qtreewidgetitem->child(2);
-        ___qtreewidgetitem3->setText(0, QApplication::translate("MainWindow", "CCTV3", 0));
+        ___qtreewidgetitem3->setText(0, QApplication::translate("MainWindow", "CCTV3", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem4 = ___qtreewidgetitem->child(3);
-        ___qtreewidgetitem4->setText(0, QApplication::translate("MainWindow", "CCTV4", 0));
+        ___qtreewidgetitem4->setText(0, QApplication::translate("MainWindow", "CCTV4", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem5 = ___qtreewidgetitem->child(4);
-        ___qtreewidgetitem5->setText(0, QApplication::translate("MainWindow", "CCTV5", 0));
+        ___qtreewidgetitem5->setText(0, QApplication::translate("MainWindow", "CCTV5", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem6 = treeWidget->topLevelItem(1);
-        ___qtreewidgetitem6->setText(0, QApplication::translate("MainWindow", "\345\215\253\350\247\206\351\242\221\351\201\223", 0));
+        ___qtreewidgetitem6->setText(0, QApplication::translate("MainWindow", "\345\215\253\350\247\206\351\242\221\351\201\223", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem7 = ___qtreewidgetitem6->child(0);
-        ___qtreewidgetitem7->setText(0, QApplication::translate("MainWindow", "\346\271\226\345\215\227\345\215\253\350\247\206", 0));
+        ___qtreewidgetitem7->setText(0, QApplication::translate("MainWindow", "\346\271\226\345\215\227\345\215\253\350\247\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem8 = ___qtreewidgetitem6->child(1);
-        ___qtreewidgetitem8->setText(0, QApplication::translate("MainWindow", "\346\265\231\346\261\237\345\215\253\350\247\206", 0));
+        ___qtreewidgetitem8->setText(0, QApplication::translate("MainWindow", "\346\265\231\346\261\237\345\215\253\350\247\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem6->child(2);
-        ___qtreewidgetitem9->setText(0, QApplication::translate("MainWindow", "\345\214\227\344\272\254\345\215\253\350\247\206", 0));
+        ___qtreewidgetitem9->setText(0, QApplication::translate("MainWindow", "\345\214\227\344\272\254\345\215\253\350\247\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem10 = treeWidget->topLevelItem(2);
-        ___qtreewidgetitem10->setText(0, QApplication::translate("MainWindow", "\346\234\254\345\234\260\351\242\221\351\201\223", 0));
+        ___qtreewidgetitem10->setText(0, QApplication::translate("MainWindow", "\346\234\254\345\234\260\351\242\221\351\201\223", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem11 = ___qtreewidgetitem10->child(0);
-        ___qtreewidgetitem11->setText(0, QApplication::translate("MainWindow", "\346\255\246\346\261\211\346\226\260\351\227\273\351\242\221\351\201\223", 0));
+        ___qtreewidgetitem11->setText(0, QApplication::translate("MainWindow", "\346\255\246\346\261\211\346\226\260\351\227\273\351\242\221\351\201\223", Q_NULLPTR));
         treeWidget->setSortingEnabled(__sortingEnabled);
 
-        label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        menu->setTitle(QApplication::translate("MainWindow", "\346\226\207\344\273\266", 0));
+        label->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
+        menu->setTitle(QApplication::translate("MainWindow", "\346\226\207\344\273\266", Q_NULLPTR));
     } // retranslateUi
 
 };
