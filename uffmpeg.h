@@ -3,14 +3,19 @@
 
 
 #include <QString>
+#include <iostream>
+#include<WinSock.h>
+
 
 extern "C"
 {
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
-#include <libswscale/swscale.h>
-#include <libavutil/imgutils.h>
+#include "libavcodec/avcodec.h"
+#include "libavformat/avformat.h"
+#include "libswscale/swscale.h"
+#include "libavdevice/avdevice.h"
 }
+
+#pragma comment(lib, "ws2_32.lib")
 
 
 using namespace std;
@@ -18,6 +23,7 @@ using namespace std;
 
 class Uffmpeg
 {
+
 public:
     Uffmpeg();
     ~Uffmpeg();
@@ -34,6 +40,10 @@ private:
 
     AVCodecContext *deCodecCtx;  //解码器上下文
     AVCodec *deCodec;            //解码器
+
+
+     int srcWidth ;
+      int srcHeight ;
 };
 
 #endif // UFFMPEG_H

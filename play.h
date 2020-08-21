@@ -13,8 +13,7 @@ class Play
 public:
     Play();
      ~Play();
-     Play(void* HWD,QString URL);
-     void Start();
+     void Start(void* HWD,QString URL);
 //    static int DecodeThread(void *param);
 //    static int ShowThread(void *param);
 

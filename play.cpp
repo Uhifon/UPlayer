@@ -3,17 +3,14 @@
 
 Play:: Play()
 {
+    ffmpeg =new Uffmpeg();
+    display= new SDLDisplay();
 }
+
 Play:: ~Play()
 {
 }
-Play::Play(void* HWD,QString URL)
-{
-   this->hwd = HWD;
-   this->url = URL;
-   ffmpeg =new Uffmpeg();
-   display= new SDLDisplay();
-}
+
 
 //解码视频线程
 int  DecodeThread(void *param)
@@ -73,9 +70,10 @@ int  ShowThread(void *param)
 
 }
 
-void Play::Start()
+void Play::Start(void* HWD,QString URL)
 {
-
+    this->hwd = HWD;
+    this->url = URL;
 //   SDL_Thread* decodeThread = SDL_CreateThread(&DecodeThread,NULL,this);
 //    SDL_Thread* playThread = SDL_CreateThread(&ShowThread,NULL,this);
 }

@@ -23,34 +23,56 @@ bool Uffmpeg::OpenVideo(QString url)
     if(ret < 0)
     {
         printf("%s","can't open input video\n");
+        CloseVideo();
         return false;
     }
     //获取视频信息
-    ret =   avformat_find_stream_info(inFormatCtx,NULL);
+    ret = avformat_find_stream_info(inFormatCtx,NULL);
     if(ret < 0)
     {
         printf("%s","can't find stream info\n");
+        CloseVideo();
         return false;
     }
 
     //找到流
+    videoStreamIndex =-1;
+    audioStreamIndex =-1;
     videoStreamIndex = av_find_best_stream(inFormatCtx, AVMEDIA_TYPE_VIDEO, -1, -1, NULL, 0);
     audioStreamIndex = av_find_best_stream(inFormatCtx, AVMEDIA_TYPE_AUDIO, -1, -1, NULL, 0);
 
-    //找到合适的解码器
-    deCodecCtx = inFormatCtx->streams[videoStreamIndex]->codec;
-    deCodec= avcodec_find_decoder(deCodecCtx->codec_id);
-    if (deCodec == NULL)
+    if(videoStreamIndex>=0)
     {
-        printf("%s","can't find decoder");
-        return false;
-    }
+        //找到合适的解码器
+        deCodecCtx = inFormatCtx->streams[videoStreamIndex]->codec;
+        srcWidth= deCodecCtx->width;
+        srcHeight =deCodecCtx->height;
+        if(srcWidth ==0)
+        {
+            printf("%s","can't find decoder");
+            CloseVideo();
+            return false;
+        }
+        deCodec= avcodec_find_decoder(deCodecCtx->codec_id);
+        if (deCodec == NULL)
+        {
+            printf("%s","can't find decoder");
+            CloseVideo();
+            return false;
+        }
 
-    //打开解码器
-    if (avcodec_open2(deCodecCtx,deCodec,NULL)<0)
+        //打开解码器
+        if (avcodec_open2(deCodecCtx,deCodec,NULL)<0)
+        {
+            printf("%s","can't open decodec\n");
+            CloseVideo();
+            return false;
+        }
+    }
+    if(audioStreamIndex>=0)
     {
-        printf("%s","can't open decodec\n");
-        return false;
+
+
     }
     return true;
 }
@@ -59,13 +81,12 @@ bool Uffmpeg::OpenVideo(QString url)
 bool Uffmpeg::ReadFrame(AVPacket* pkt)
 {
     int ret = av_read_frame(inFormatCtx,pkt);
-    if(ret==0)
-        return true;
-    else
+    if(ret<0)
     {
         printf("%s","read frame fail\n");
         return false;
     }
+     return true;
 }
 
 //解码视频

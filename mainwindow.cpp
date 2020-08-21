@@ -6,9 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    void* hwd = (void*)ui->label->winId();
-    //myPlayer =new Play(hwd);
+     myPlayer =new Play();
 }
 
 MainWindow::~MainWindow()
@@ -18,6 +16,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column)
 {
-
-   // myPlayer->Start();
+    QString txt = item->text(0);
+    void* hwd = (void*)ui->label->winId();
+    QString url ="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8";
+     myPlayer->Start(hwd,url);
 }

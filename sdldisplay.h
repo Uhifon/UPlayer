@@ -1,7 +1,7 @@
 ﻿#ifndef SDLDISPLAY_H
 #define SDLDISPLAY_H
 
-#include <SDL/include/SDL.h>
+#include <SDL.h>
 #include "stdio.h"
 extern "C"
 {
